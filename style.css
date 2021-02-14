@@ -1,0 +1,21 @@
+* {
+font-family: NOTO SANS KR,Apple SD Gothic Neo,NanumBarunGothic,NanumGothic,malgun gothic,sans-serif;
+}
+.container {
+margin-left:150;
+margin-right:150;
+padding-left:10;
+padding-right:10;
+}
+@media (max-width: 768px){
+.container {
+margin-left:0;
+margin-right:0;
+padding-left:10px;
+padding-right:10px;
+}
+}
+.input{
+    margin-bottom:5px;
+    margin-top:5px;
+}
