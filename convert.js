@@ -1,5 +1,15 @@
-function arabictohangul() {
+function arabictohangul() { 
+    // 아랍문자->한글 변환함수
     var result = document.getElementById('arabic').value;
+    //모음기호 변환
+    result = result.replace(/(.{1})ّ/g,'$1$1');
+    result = result.replace(/(يَ)/g,'ㅑ');
+    result = result.replace(/(َ)/g,'ㅏ');
+    result = result.replace(/(يُ)/g,'ㅠ');
+    result = result.replace(/(ُ)/g,'ㅜ');
+    result = result.replace(/(ِ)/g,'ㅣ');
+    result = result.replace(/[ًٌٍْ]/g,'');
+    //일반 변환
     result = result.replace(/(ض|د|ذ)/g,'ㄷ');
     result = result.replace(/(س|ش|ص|ث)/g,'ㅅ');
     result = result.replace(/(ق)/g,'ㄲ');
@@ -18,7 +28,6 @@ function arabictohangul() {
     result = result.replace(/(ك)/g,'ㅋ');
     result = result.replace(/(ة)/g,'ㅏ트');
     result = result.replace(/(و)/g,'ㅜ');
-    result = result.replace(/(.{1})ّ/g,'$1$1');
     result = Hangul.assemble(result.split(''));
     result = result.replace(/(ㅏ|ㅓ|ㅑ|ㅕ|ㅗ|ㅜ|ㅛ|ㅠ|ㅣ|ㅔ|ㅖ|ㅐ|ㅒ)/g,'ㅇ$1');
     result = Hangul.assemble(result.split(''));
@@ -79,7 +88,7 @@ function hangultoarabic() {
     //최종 변환
     result = result.replace(/رر/g,'ل');
     result = result.replace(/يي/g,'ي');
-    result = result.replace(/يا/g,'ية');
+    result = result.replace(/يا(\s|$)/g,'ية$1');
     // 표시
     document.getElementById('arabictext').innerHTML = result;
 }function arabictranslate() {

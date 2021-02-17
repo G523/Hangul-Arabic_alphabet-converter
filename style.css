@@ -36,11 +36,19 @@ body{
 .head{
     font-size:120%
 }
+.input:focus,.select:focus {
+  outline: none;
+}
 .input{
+    padding-left:7px;
+    padding-right:7px;
+    width: 100%;
     margin-bottom:5px;
     margin-top:5px;
+}
+.input, .select{
     border: 1px solid black;
-    width: 100%;
+    border-radius: 20px;
 }
 .footer{
     text-align: center;

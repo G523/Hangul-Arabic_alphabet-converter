@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
     <script src="https://unpkg.com/hangul-js" type="text/javascript"></script>
     <script src="convert.js" type="text/javascript"></script>
@@ -14,7 +15,7 @@
             한글-아랍문자 변환기, هَنكُل العَربيةمُنجَ بيُنهَنكِ
         </div>
         <textarea name="arabic" class="input" id="arabic"></textarea><br>
-        <select name="t_type" id="t_type" onchange="arabictranslate()">
+        <select name="t_type" id="t_type" class="select" onchange="arabictranslate()">
             <option value="hta">한글->아랍문자</option>
             <option value="ath">아랍문자->한글</option>
         </select>
